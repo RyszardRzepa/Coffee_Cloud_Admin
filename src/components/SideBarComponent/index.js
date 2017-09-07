@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom';
+import firebase from 'firebase';
 
 import Sidebar from 'grommet/components/Sidebar';
 import Header from 'grommet/components/Header';
@@ -10,9 +10,12 @@ import Box from 'grommet/components/Box';
 import Anchor from 'grommet/components/Anchor';
 import Button from 'grommet/components/Button';
 import User from 'grommet/components/icons/base/User';
-import Edit from 'grommet/components/icons/base/Edit';
 
 class NavSidebar extends Component {
+  logOut = () => {
+    return firebase.auth().signOut();
+  };
+  
   render() {
     return (
       <Sidebar colorIndex='neutral-1'>
@@ -34,7 +37,9 @@ class NavSidebar extends Component {
           </Menu>
         </Box>
         <Footer pad='medium'>
-          <Button icon={<User />} />
+          <Button onClick={this.logOut} icon={<User />} >
+            Logout
+          </Button>
         </Footer>
       </Sidebar>
     );

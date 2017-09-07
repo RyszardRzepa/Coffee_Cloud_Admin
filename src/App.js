@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import './App.css';
-import { BrowserRouter } from 'react-router-dom'
 import firebase from 'firebase';
 
 const config = {
@@ -19,9 +18,7 @@ import Main from './components/Main';
 class App extends Component {
   render () {
     return (
-      <BrowserRouter>
-        <Main/>
-      </BrowserRouter>
+      <Main/>
     );
   }
 }

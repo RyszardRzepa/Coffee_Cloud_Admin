@@ -28,8 +28,13 @@ class Login extends Component {
     return (
       <Split flex='left' separator={true}>
         <Article>
-          <Section full={true} colorIndex='brand' texture='url(img/splash.png)'
-                   pad='large' justify='center' align='center'>
+          <Section
+            full={true}
+            colorIndex='brand'
+            texture='url(img/splash.png)'
+            pad='large'
+            justify='center'
+            align='center'>
             <Heading tag='h1'><strong>Coffee Cloud</strong></Heading>
             <Paragraph align='center' size='large'>
               Here You Can Manage Coffee Bars
