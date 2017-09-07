@@ -4,13 +4,14 @@ import { BrowserRouter } from 'react-router-dom'
 import firebase from 'firebase';
 
 const config = {
-  apiKey: "AIzaSyBaB_6jFIUG7q8lpYHbxvtsNzyVr0xDuXA",
-  authDomain: "weather-forecast-9a2a5.firebaseapp.com",
-  databaseURL: "https://weather-forecast-9a2a5.firebaseio.com",
-  projectId: "weather-forecast-9a2a5",
-  storageBucket: "weather-forecast-9a2a5.appspot.com",
-  messagingSenderId: "317335334484"
+  apiKey: "AIzaSyCIPm4Ae7tcl8Fpwp7QvARabOu0zeDaBT4",
+  authDomain: "coffee-cloud-mobile-app.firebaseapp.com",
+  databaseURL: "https://coffee-cloud-mobile-app.firebaseio.com",
+  projectId: "coffee-cloud-mobile-app",
+  storageBucket: "coffee-cloud-mobile-app.appspot.com",
+  messagingSenderId: "838735469817"
 };
+
 firebase.initializeApp(config);
 
 import Main from './components/Main';
@@ -18,7 +19,9 @@ import Main from './components/Main';
 class App extends Component {
   render () {
     return (
-      <Main/>
+      <BrowserRouter>
+        <Main/>
+      </BrowserRouter>
     );
   }
 }

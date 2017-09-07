@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import firebase from 'firebase';
 
 import Split from 'grommet/components/Split';
 import Sidebar from 'grommet/components/Sidebar';
@@ -9,9 +10,21 @@ import Heading from 'grommet/components/Heading';
 import Paragraph from 'grommet/components/Paragraph';
 import Footer from 'grommet/components/Footer';
 
-
 class Login extends Component {
-  render() {
+  componentWillMount () {
+    let app = this;
+    firebase.auth().onAuthStateChanged(function (user) {
+      if (user) {
+        app.props.history.push('/dashboard')
+      }
+    });
+  }
+  
+  onLogin = (e) => {
+    firebase.auth().signInWithEmailAndPassword(e.username, e.password)
+  };
+  
+  render () {
     return (
       <Split flex='left' separator={true}>
         <Article>
@@ -25,9 +38,13 @@ class Login extends Component {
         </Article>
         
         <Sidebar justify='between' align='center' pad='none' size='large'>
-          <span />
-          <LoginForm align='start' title='CC Admin'
-                     onSubmit={() => console.log('clicked login')} errors={[]} usernameType='text'
+          <span/>
+          <LoginForm
+            align='start'
+            title='CC Admin'
+            onSubmit={this.onLogin}
+            errors={[]}
+            usernameType='text'
           />
           <Footer direction='row' size='small'
                   pad={{ horizontal: 'medium', vertical: 'small' }}>
