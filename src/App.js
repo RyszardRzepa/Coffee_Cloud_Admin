@@ -1,18 +1,24 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { BrowserRouter } from 'react-router-dom'
+import firebase from 'firebase';
 
-import { default as GrommetApp } from 'grommet/components/App'
-import Headline from 'grommet/components/Headline'
-import Image from 'grommet/components/Image'
+const config = {
+  apiKey: "AIzaSyBaB_6jFIUG7q8lpYHbxvtsNzyVr0xDuXA",
+  authDomain: "weather-forecast-9a2a5.firebaseapp.com",
+  databaseURL: "https://weather-forecast-9a2a5.firebaseio.com",
+  projectId: "weather-forecast-9a2a5",
+  storageBucket: "weather-forecast-9a2a5.appspot.com",
+  messagingSenderId: "317335334484"
+};
+firebase.initializeApp(config);
+
+import Main from './components/Main';
 
 class App extends Component {
-  render() {
+  render () {
     return (
-      <GrommetApp>
-        <Image src={logo} />
-        <Headline>Welcome to React with Grommet</Headline>
-      </GrommetApp>
+      <Main/>
     );
   }
 }
