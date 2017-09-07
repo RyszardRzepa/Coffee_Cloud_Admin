@@ -28,11 +28,14 @@ class NavSidebar extends Component {
         <Box flex='grow'
              justify='start'>
           <Menu primary={true}>
-            <Anchor path='/orders' className='active'>
+            <Anchor path='/orders'>
               Orders
             </Anchor>
-            <Anchor path='/settings' className='active'>
-              Settings
+            <Anchor path='/update-cafe-info'>
+              Update Cafe Info
+            </Anchor>
+            <Anchor path='/update-menu'>
+              Update Menu
             </Anchor>
           </Menu>
         </Box>

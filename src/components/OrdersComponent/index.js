@@ -2,11 +2,6 @@ import React, { Component } from 'react';
 import firebase from 'firebase';
 
 import Dashboard from '../DashboardComponent';
-import Form from 'grommet/components/Form';
-import Header from 'grommet/components/Header';
-import FormFields from 'grommet/components/FormFields';
-import Footer from 'grommet/components/Footer';
-import Button from 'grommet/components/Button';
 import Heading from 'grommet/components/Heading';
 import Accordion from 'grommet/components/Accordion';
 import AccordionPanel from 'grommet/components/AccordionPanel';
@@ -48,21 +43,21 @@ export default class OrdersComponent extends Component {
             <div>
               {item.order.cart.map((order, i) => {
                 return <div style={styles.contentContainer} key={i}>
-                  <Paragraph  style={styles.contentText}>
+                  <Paragraph style={styles.contentText}>
                     {order.count}
                   </Paragraph>
-                  <Paragraph  style={styles.contentText}>
+                  <Paragraph style={styles.contentText}>
                     {order.name}
                   </Paragraph>
-                  <Paragraph  style={styles.contentText}>
+                  <Paragraph style={styles.contentText}>
                     {order.size}
                   </Paragraph>
-                  <Paragraph  style={styles.contentText}>
+                  <Paragraph style={styles.contentText}>
                     {order.price} NOK
                   </Paragraph>
                 </div>
               })}
-              
+            
             </div>
           </AccordionPanel>
         </Accordion>
@@ -73,10 +68,12 @@ export default class OrdersComponent extends Component {
   render () {
     return (
       <Dashboard>
-        <Heading>
-          Order History
-        </Heading>
-        {this.renderOrders()}
+        <div style={{ margin: 10 }}>
+          <Heading>
+            Order History
+          </Heading>
+          {this.renderOrders()}
+        </div>
       </Dashboard>
     )
   }

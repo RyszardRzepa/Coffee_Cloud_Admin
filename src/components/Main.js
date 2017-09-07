@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Switch, Redirect } from 'react-router-dom';
+import firebase from 'firebase';
 
 import App from 'grommet/components/App';
 import Login from './LoginComponent/index';
-import Dashboard from './DashboardComponent/index';
 import Orders from './OrdersComponent';
-import Settings from './Settings';
+import UpdateCafeInfo from './UpdateCafeInfo';
+import UpdateMenu from './UpdateMenuComponent';
 
 class Main extends Component {
   render () {
@@ -14,10 +15,9 @@ class Main extends Component {
         <Router>
           <Switch>
             <Route exact={true} path='/' component={Login}/>
-            <Route path='/login' component={Login}/>
-            <Route path='/dashboard' component={Dashboard} />
             <Route path='/orders' component={Orders}/>
-            <Route path='/settings' component={Settings}/>
+            <Route path='/update-cafe-info' component={UpdateCafeInfo}/>
+            <Route path='/update-menu' component={UpdateMenu}/>
             <Route path='/*' component={Login}/>
           </Switch>
         </Router>

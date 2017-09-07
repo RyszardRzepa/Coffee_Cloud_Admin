@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import { Redirect } from 'react-router-dom';
+import {withRouter} from "react-router-dom";
 
 import Article from 'grommet/components/Article';
 import Split from 'grommet/components/Split';
@@ -11,10 +11,8 @@ class Dashboard extends Component {
     let app = this;
     firebase.auth().onAuthStateChanged(function (user) {
       if (!user) {
-        console.log('no user')
-        return <Redirect to='/login'/>
+        app.props.history.push('/')
       }
-      console.log('user exist')
     });
   }
   
@@ -30,4 +28,4 @@ class Dashboard extends Component {
   }
 }
 
-export default Dashboard;
+export default withRouter(Dashboard);

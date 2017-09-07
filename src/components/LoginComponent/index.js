@@ -15,7 +15,7 @@ class Login extends Component {
     let app = this;
     firebase.auth().onAuthStateChanged(function (user) {
       if (user) {
-        app.props.history.push('/dashboard')
+        app.props.history.push('/orders')
       }
     });
   }
@@ -33,8 +33,7 @@ class Login extends Component {
             colorIndex='brand'
             texture='url(img/splash.png)'
             pad='large'
-            justify='center'
-            align='center'>
+            justify='center' align='center'>
             <Heading tag='h1'><strong>Coffee Cloud</strong></Heading>
             <Paragraph align='center' size='large'>
               Here You Can Manage Coffee Bars
