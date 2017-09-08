@@ -9,10 +9,12 @@ import AccordionPanel from 'grommet/components/AccordionPanel';
 import Paragraph from 'grommet/components/Paragraph';
 import Tabs from 'grommet/components/Tabs';
 import Tab from 'grommet/components/Tab';
+import Spinning from 'grommet/components/icons/Spinning';
 
 export default class OrdersComponent extends Component {
   state = {
-    cafeOrders: []
+    cafeOrders: [],
+    isLoading: false,
   };
   
   async componentWillMount () {
@@ -21,6 +23,8 @@ export default class OrdersComponent extends Component {
       if (user) {
         const uid = firebase.auth().currentUser.uid;
         const userRef = firebase.database().ref(`coffee_bars/orders/${uid}`);
+       
+        this.setState({ isLoading: true });
         
         userRef.on('value', orders => {
           let cafeOrders = [];
@@ -31,7 +35,8 @@ export default class OrdersComponent extends Component {
               receipt_number: order.val().receipt_number
             })
           });
-          _this.setState({ cafeOrders })
+          
+          _this.setState({ cafeOrders, isLoading: false })
         })
       }
     })
@@ -40,14 +45,30 @@ export default class OrdersComponent extends Component {
   filterOrdersByToday = () => {
     let today = Date.now();
     const todayStr = moment(today).format('MMMM Do YYYY')
-    console.log(todayStr)
     
     return this.state.cafeOrders.map((item, i) => {
       if (todayStr === moment(item.date).format('MMMM Do YYYY'))
         return <Accordion key={i}>
           <AccordionPanel
-            heading={`Order Number: ${i} |   Order Total Price: ${item.order.total} NOK`}>
+            heading={this.renderAccordionHeading(item, i)}>
             <div>
+              <div style={styles.contentContainer} key={i}>
+                <Paragraph style={styles.contentText2}>
+                  amount
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                  name
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                  size
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                  price
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                  mva
+                </Paragraph>
+              </div>
               {item.order.cart.map((order, i) => {
                 return <div style={styles.contentContainer} key={i}>
                   <Paragraph style={styles.contentText}>
@@ -62,6 +83,11 @@ export default class OrdersComponent extends Component {
                   <Paragraph style={styles.contentText}>
                     {order.price} NOK
                   </Paragraph>
+                  {item.order.takeAway ? <Paragraph style={styles.contentText}>
+                    15%
+                  </Paragraph>: <Paragraph style={styles.contentText}>
+                    25%
+                  </Paragraph> }
                 </div>
               })}
             </div>
@@ -81,7 +107,6 @@ export default class OrdersComponent extends Component {
   showOrderHistory = () => {
     let today = Date.now();
     const todayStr = moment(today).format('MMMM Do YYYY')
-    console.log(todayStr)
     
     return this.state.cafeOrders.map((item, i) => {
       if (todayStr !== moment(item.date).format('MMMM Do YYYY'))
@@ -89,7 +114,26 @@ export default class OrdersComponent extends Component {
           <AccordionPanel
             heading={this.renderAccordionHeading(item, i)}>
             <div>
+              <div style={styles.contentContainer} key={i}>
+                <Paragraph style={styles.contentText2}>
+                  amount
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                   name
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                   size
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                  price
+                </Paragraph>
+                <Paragraph style={styles.contentText2}>
+                  mva
+                </Paragraph>
+              </div>
+            
               {item.order.cart.map((order, i) => {
+                console.log(item)
                 return <div style={styles.contentContainer} key={i}>
                   <Paragraph style={styles.contentText}>
                     {order.count}
@@ -103,6 +147,12 @@ export default class OrdersComponent extends Component {
                   <Paragraph style={styles.contentText}>
                     {order.price} NOK
                   </Paragraph>
+                  {item.order.takeAway ? <Paragraph style={styles.contentText}>
+                    15%
+                  </Paragraph>: <Paragraph style={styles.contentText}>
+                    25%
+                  </Paragraph> }
+                  
                 </div>
               })}
             </div>
@@ -111,14 +161,22 @@ export default class OrdersComponent extends Component {
     })
   };
   
+  showLoadingIndicator = () => {
+    return <div style={{ display: 'flex', flex: 1, justifyContent: 'center', alignItems: 'center' }}>
+      <Spinning responsive={true} size={'large'}/>
+    </div>
+  };
+  
   renderOrders = () => {
-    if (this.state.cafeOrders) {
+    const { cafeOrders, isLoading } = this.state;
+    
+    if (cafeOrders) {
       return <Tabs justify='start'>
         <Tab title='Today Orders'>
-          {this.filterOrdersByToday()}
+          {isLoading ? this.showLoadingIndicator() : this.filterOrdersByToday()}
         </Tab>
         <Tab title='Order History'>
-          {this.showOrderHistory()}
+          {isLoading ? this.showLoadingIndicator() : this.showOrderHistory()}
         </Tab>
       </Tabs>
     }
@@ -147,9 +205,19 @@ const styles = {
     display: 'flex',
     justifyContent: 'space-between',
     alignItems: 'center',
+    flex: 1,
   },
   contentText: {
+    textAlign: 'flex-start',
+    flex: 1,
+    fontSize: 18,
+    fontWeight: '500'
+  },
+  contentText2: {
+    color: '#2b2b2b',
+    textAlign: 'flex-start',
+    flex: 1,
     fontSize: 20,
     fontWeight: '500'
   }
-}
+};
