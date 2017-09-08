@@ -36,7 +36,7 @@ class Login extends Component {
             justify='center' align='center'>
             <Heading tag='h1'><strong>Coffee Cloud</strong></Heading>
             <Paragraph align='center' size='large'>
-              Here You Can Manage Coffee Bars
+              Administrative dashboard for Coffee Bars
             </Paragraph>
           </Section>
         </Article>

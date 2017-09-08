@@ -2,13 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="2aa628cc-dfa7-4f95-9452-89451de9a8c7" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/UpdateCafeInfo/index.js" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/components/UpdateMenuComponent/index.js" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/src/components/Settings/index.js" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/DashboardComponent/index.js" afterPath="$PROJECT_DIR$/src/components/DashboardComponent/index.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/package.json" afterPath="$PROJECT_DIR$/package.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/LoginComponent/index.js" afterPath="$PROJECT_DIR$/src/components/LoginComponent/index.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/Main.js" afterPath="$PROJECT_DIR$/src/components/Main.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/OrdersComponent/index.js" afterPath="$PROJECT_DIR$/src/components/OrdersComponent/index.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/components/SideBarComponent/index.js" afterPath="$PROJECT_DIR$/src/components/SideBarComponent/index.js" />
     </list>
@@ -27,35 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/DashboardComponent/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="288">
-              <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="index.js" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/components/LoginComponent/index.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="326">
-              <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="index.js" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/components/OrdersComponent/index.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="260">
-              <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+            <state relative-caret-position="179">
+              <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
               <folding>
                 <element signature="e#0#41#0" expanded="true" />
               </folding>
@@ -87,7 +59,6 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/src/App.css" />
-        <option value="$PROJECT_DIR$/firebase.json" />
         <option value="$PROJECT_DIR$/package.json" />
         <option value="$PROJECT_DIR$/functions/index.js" />
         <option value="$PROJECT_DIR$/src/components/Dashboard/index.js" />
@@ -95,13 +66,14 @@
         <option value="$PROJECT_DIR$/src/components/Admin/index.js" />
         <option value="$PROJECT_DIR$/src/components/index.js" />
         <option value="$PROJECT_DIR$/src/App.js" />
-        <option value="$PROJECT_DIR$/src/components/SideBarComponent/index.js" />
         <option value="$PROJECT_DIR$/src/components/Settings/index.js" />
         <option value="$PROJECT_DIR$/src/components/UpdateCafeInfo/index.js" />
         <option value="$PROJECT_DIR$/src/components/UpdateMenuComponent/index.js" />
         <option value="$PROJECT_DIR$/src/components/Main.js" />
+        <option value="$PROJECT_DIR$/firebase.json" />
         <option value="$PROJECT_DIR$/src/components/DashboardComponent/index.js" />
         <option value="$PROJECT_DIR$/src/components/LoginComponent/index.js" />
+        <option value="$PROJECT_DIR$/src/components/SideBarComponent/index.js" />
         <option value="$PROJECT_DIR$/src/components/OrdersComponent/index.js" />
       </list>
     </option>
@@ -165,7 +137,14 @@
               <item name="CC-Admin" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="OrdersComponent" type="462c0819:PsiDirectoryNode" />
+              <item name="SideBarComponent" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CC-Admin" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CC-Admin" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
+              <item name="UpdateCafeInfo" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -212,12 +191,12 @@
       <workItem from="1504641252618" duration="3922000" />
       <workItem from="1504716068386" duration="13141000" />
       <workItem from="1504787411395" duration="1608000" />
-      <workItem from="1504790623558" duration="14079000" />
+      <workItem from="1504790623558" duration="17515000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="32750000" />
+    <option name="totallyTimeSpent" value="36186000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -270,7 +249,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -280,7 +259,7 @@
         <state relative-caret-position="558">
           <caret line="40" column="1" lean-forward="true" selection-start-line="40" selection-start-column="1" selection-end-line="40" selection-end-column="1" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -290,7 +269,7 @@
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -431,7 +410,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LoginComponent/index.js" />
-    <entry file="file://$PROJECT_DIR$/firebase.json" />
     <entry file="file://$PROJECT_DIR$/src/components/Dashboard/index.js" />
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
@@ -461,17 +439,7 @@
         <state relative-caret-position="360">
           <caret line="20" column="13" lean-forward="true" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/SideBarComponent/index.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="237">
-          <caret line="25" column="18" lean-forward="true" selection-start-line="25" selection-start-column="18" selection-end-line="25" selection-end-column="18" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -481,18 +449,32 @@
         <state relative-caret-position="360">
           <caret line="20" column="23" lean-forward="true" selection-start-line="20" selection-start-column="23" selection-end-line="20" selection-end-column="23" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/UpdateCafeInfo/index.js">
+    <entry file="file://$PROJECT_DIR$/.firebaserc">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="360">
-          <caret line="20" column="28" lean-forward="true" selection-start-line="0" selection-start-column="0" selection-end-line="48" selection-end-column="1" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="90">
+          <caret line="5" column="0" lean-forward="true" selection-start-line="5" selection-start-column="0" selection-end-line="5" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/firebase.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="342">
+          <caret line="27" column="0" lean-forward="true" selection-start-line="27" selection-start-column="0" selection-end-line="27" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -501,35 +483,39 @@
         <state relative-caret-position="288">
           <caret line="16" column="3" lean-forward="true" selection-start-line="16" selection-start-column="3" selection-end-line="16" selection-end-column="3" />
           <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/components/Main.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="12" column="12" lean-forward="true" selection-start-line="12" selection-start-column="12" selection-end-line="12" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
+            <element signature="e#0#41#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/LoginComponent/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="326">
-          <caret line="23" column="70" lean-forward="false" selection-start-line="23" selection-start-column="70" selection-end-line="23" selection-end-column="70" />
-          <folding>
-            <element signature="e#0#41#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="270">
+          <caret line="25" column="2" lean-forward="true" selection-start-line="25" selection-start-column="2" selection-end-line="25" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/SideBarComponent/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="38" column="17" lean-forward="true" selection-start-line="38" selection-start-column="17" selection-end-line="38" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/components/UpdateCafeInfo/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="216">
+          <caret line="24" column="17" lean-forward="true" selection-start-line="24" selection-start-column="17" selection-end-line="24" selection-end-column="17" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/components/OrdersComponent/index.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="260">
-          <caret line="70" column="33" lean-forward="false" selection-start-line="70" selection-start-column="33" selection-end-line="70" selection-end-column="33" />
+        <state relative-caret-position="179">
+          <caret line="78" column="4" lean-forward="true" selection-start-line="78" selection-start-column="4" selection-end-line="78" selection-end-column="4" />
           <folding>
             <element signature="e#0#41#0" expanded="true" />
           </folding>

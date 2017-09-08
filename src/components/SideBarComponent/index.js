@@ -18,11 +18,10 @@ class NavSidebar extends Component {
   
   render() {
     return (
-      <Sidebar colorIndex='neutral-1'>
-        <Header pad='medium'
-                justify='between'>
+      <Sidebar colorIndex='neutral-1-a'>
+        <Header colorIndex='neutral-1-a' pad='medium' justify='between' >
           <Title>
-            Title
+            Cafe Bar Name
           </Title>
         </Header>
         <Box flex='grow'
