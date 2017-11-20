@@ -4,9 +4,9 @@ import firebase from 'firebase';
 
 import App from 'grommet/components/App';
 import Login from './LoginComponent/index';
-import Orders from './OrdersComponent';
-import UpdateCafeInfo from './UpdateCafeInfo';
-import UpdateMenu from './UpdateMenuComponent';
+import Orders from './CafesListComponent';
+import UpdateCafeInfo from './FilterOrders';
+import Settings from './Settings';
 
 class Main extends Component {
   render () {
@@ -16,8 +16,8 @@ class Main extends Component {
           <Switch>
             <Route exact={true} path='/' component={Login}/>
             <Route path='/orders' component={Orders}/>
-            <Route path='/update-cafe-info' component={UpdateCafeInfo}/>
-            <Route path='/update-menu' component={UpdateMenu}/>
+            <Route path='/filter-orders' component={UpdateCafeInfo}/>
+            <Route path='/settings' component={Settings}/>
             <Route path='/*' component={Login}/>
           </Switch>
         </Router>

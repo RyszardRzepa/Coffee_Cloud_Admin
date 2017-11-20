@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import firebase from 'firebase';
-import {withRouter} from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 import Article from 'grommet/components/Article';
 import Split from 'grommet/components/Split';
@@ -9,11 +9,18 @@ import NavSidebar from "../SideBarComponent/index";
 class Dashboard extends Component {
   componentWillMount () {
     let app = this;
-    firebase.auth().onAuthStateChanged(function (user) {
-      if (!user) {
-        app.props.history.push('/')
-      }
-    });
+    // firebase.auth().onAuthStateChanged(function (user) {
+    //   if (!user) {
+    //    return app.props.history.push('/')
+    //   }
+    //
+    //   let dbRef = firebase.database().ref(`coffee_bars/accounts/${user.uid}`);
+    //   dbRef.on('value', snap => {
+    //     if (!snap.val().ccPartner) {
+    //       return app.props.history.push('/')
+    //     }
+    //   });
+    // });
   }
   
   render () {
