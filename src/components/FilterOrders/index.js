@@ -1,13 +1,10 @@
 import React, { Component } from 'react';
 import Dashboard from '../DashboardComponent';
 import firebase from 'firebase';
-import { DateRange } from 'react-date-range';
+// import { DateRange } from 'react-date-range';
 
-import moment from 'moment';
 import Table from 'grommet/components/Table';
 import TableRow from 'grommet/components/TableRow';
-
-import _ from 'lodash';
 
 export default class Settings extends Component {
   state = {
@@ -160,28 +157,3 @@ export default class Settings extends Component {
     )
   }
 }
-
-const styles = {
-  contentContainer: {
-    backgroundColor: '#f3f3f3',
-    paddingLeft: 20,
-    paddingRight: 20,
-    display: 'flex',
-    justifyContent: 'space-between',
-    alignItems: 'center',
-    flex: 1,
-  },
-  contentText: {
-    textAlign: 'flex-start',
-    flex: 1,
-    fontSize: 16,
-    fontWeight: '500'
-  },
-  contentText2: {
-    color: '#2b2b2b',
-    textAlign: 'flex-start',
-    flex: 1,
-    fontSize: 18,
-    fontWeight: '500'
-  }
-};

@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import firebase from 'firebase';
 import { withRouter } from "react-router-dom";
 
 import Article from 'grommet/components/Article';
@@ -8,7 +7,7 @@ import NavSidebar from "../SideBarComponent/index";
 
 class Dashboard extends Component {
   componentWillMount () {
-    let app = this;
+    // let app = this;
     // firebase.auth().onAuthStateChanged(function (user) {
     //   if (!user) {
     //    return app.props.history.push('/')

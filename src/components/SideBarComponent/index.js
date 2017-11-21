@@ -11,8 +11,7 @@ import Anchor from 'grommet/components/Anchor';
 import Paragraph from 'grommet/components/Paragraph';
 import Button from 'grommet/components/Button';
 import User from 'grommet/components/icons/base/User';
-import UserSettings from 'grommet/components/icons/base/UserSettings';
-import SVGIcon from 'grommet/components/SVGIcon';
+
 
 class NavSidebar extends Component {
   state = {
