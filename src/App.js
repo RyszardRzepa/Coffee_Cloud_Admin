@@ -10,7 +10,7 @@ const config = {
   databaseURL: "https://dev-coffee-cloud-mobile.firebaseio.com",
   projectId: "dev-coffee-cloud-mobile",
   storageBucket: "dev-coffee-cloud-mobile.appspot.com",
-  messagingSenderId: "550841968043"
+  messagingSenderId: "550841968043",
 };
 
 

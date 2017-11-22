@@ -21,7 +21,7 @@ class Login extends Component {
   componentWillMount () {
     let app = this;
   
-    return app.props.history.push('/orders')
+    // return app.props.history.push('/orders')
   }
   
   onLogin = async (e) => {
